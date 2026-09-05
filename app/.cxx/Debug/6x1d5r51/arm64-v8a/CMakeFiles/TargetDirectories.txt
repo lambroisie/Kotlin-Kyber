@@ -1,0 +1,3 @@
+/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/arm64-v8a/CMakeFiles/mlkem-native.dir
+/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/arm64-v8a/CMakeFiles/edit_cache.dir
+/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/arm64-v8a/CMakeFiles/rebuild_cache.dir

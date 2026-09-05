@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/x86_64",
+  "command": "/var/home/tina/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android24 --sysroot=/var/home/tina/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dmlkem_native_EXPORTS -I/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem -I/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem/src -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -o CMakeFiles/mlkem-native.dir/mlkem/mlkem_native.c.o -c /var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem/mlkem_native.c",
+  "file": "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem/mlkem_native.c"
+},
+{
+  "directory": "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/x86_64",
+  "command": "/var/home/tina/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android24 --sysroot=/var/home/tina/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dmlkem_native_EXPORTS -I/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem -I/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem/src -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -o CMakeFiles/mlkem-native.dir/mlkem/src/randombytes_impl.c.o -c /var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem/src/randombytes_impl.c",
+  "file": "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/mlkem/src/randombytes_impl.c"
+}
+]

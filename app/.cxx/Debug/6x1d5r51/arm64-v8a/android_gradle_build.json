@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/var/home/tina/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/var/home/tina/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "mlkem-native::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "mlkem-native",
+      "output": "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/build/intermediates/cxx/Debug/6x1d5r51/obj/arm64-v8a/libmlkem-native.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/var/home/tina/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/var/home/tina/Android/Sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

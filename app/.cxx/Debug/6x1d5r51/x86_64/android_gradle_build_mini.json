@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/src/main/cpp/mlkem-native/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/var/home/tina/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/var/home/tina/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/.cxx/Debug/6x1d5r51/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "mlkem-native::@6890427a1f51a3e7e1df": {
+      "artifactName": "mlkem-native",
+      "abi": "x86_64",
+      "output": "/var/home/tina/AndroidStudioProjects/KotlinKyber/app/build/intermediates/cxx/Debug/6x1d5r51/obj/x86_64/libmlkem-native.so",
+      "runtimeFiles": []
+    }
+  }
+}
