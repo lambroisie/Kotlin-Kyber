@@ -21,9 +21,9 @@ JNIEXPORT jbyteArray JNI_GenerateKeyPair(JNIEnv *env) {
         return NULL;
     }
 
-    jbyteArray result = env->NewByteArray(PK_SIZE + SK_SIZE);
-    env->SetByteArrayRegion(result, 0, PK_SIZE, (jbyte*)pk);
-    env->SetByteArrayRegion(result, PK_SIZE, SK_SIZE, (jbyte*)sk);
+    jbyteArray result = (*env)->NewByteArray(env, PK_SIZE + SK_SIZE);
+    (*env)->SetByteArrayRegion(env, result, 0, PK_SIZE, (jbyte*)pk);
+    (*env)->SetByteArrayRegion(env, result, PK_SIZE, SK_SIZE, (jbyte*)sk);
 
     return result;
 }
@@ -37,18 +37,18 @@ JNIEXPORT jbyteArray JNI_Encapsulate(JNIEnv *env, jbyteArray pk_array) {
     unsigned char ct[CT_SIZE];
     unsigned char ss[SS_SIZE];
 
-    jbyte* pk_ptr = env->GetByteArrayElements(pk_array, NULL);
+    jbyte* pk_ptr = (*env)->GetByteArrayElements(env, pk_array, NULL);
     memcpy(pk, pk_ptr, PK_SIZE);
-    env->ReleaseByteArrayElements(pk_array, pk_ptr, JNI_ABORT);
+    (*env)->ReleaseByteArrayElements(env, pk_array, pk_ptr, JNI_ABORT);
 
     // Use the namespaced encaps function
     if (MLK_API_NAMESPACE(enc)(ct, ss, pk) != 0) {
         return NULL;
     }
 
-    jbyteArray result = env->NewByteArray(CT_SIZE + SS_SIZE);
-    env->SetByteArrayRegion(result, 0, CT_SIZE, (jbyte*)ct);
-    env->SetByteArrayRegion(result, CT_SIZE, SS_SIZE, (jbyte*)ss);
+    jbyteArray result = (*env)->NewByteArray(env, CT_SIZE + SS_SIZE);
+    (*env)->SetByteArrayRegion(env, result, 0, CT_SIZE, (jbyte*)ct);
+    (*env)->SetByteArrayRegion(env, result, CT_SIZE, SS_SIZE, (jbyte*)ss);
 
     return result;
 }
@@ -61,20 +61,19 @@ JNIEXPORT jbyteArray JNI_Decapsulate(JNIEnv *env, jbyteArray ct_array, jbyteArra
     unsigned char sk[SK_SIZE];
     unsigned char ss[SS_SIZE];
 
-    jbyte* ct_ptr = env->GetByteArrayElements(ct_array, NULL);
+    jbyte* ct_ptr = (*env)->GetByteArrayElements(env, ct_array, NULL);
     memcpy(ct, ct_ptr, CT_SIZE);
-    env->ReleaseByteArrayElements(ct_array, ct_ptr, JNI_ABORT);
+    (*env)->ReleaseByteArrayElements(env, ct_array, ct_ptr, JNI_ABORT);
 
-    jbyte* sk_ptr = env->GetByteArrayElements(sk_array, NULL);
+    jbyte* sk_ptr = (*env)->GetByteArrayElements(env, sk_array, NULL);
     memcpy(sk, sk_ptr, SK_SIZE);
-    env->ReleaseByteArrayElements(sk_array, sk_ptr, JNI_ABORT);
+    (*env)->ReleaseByteArrayElements(env, sk_array, sk_ptr, JNI_ABORT);
 
     // Use the namespaced decaps function
     if (MLK_API_NAMESPACE(dec)(ss, ct, sk) != 0) {
         return NULL;
     }
 
-    jbyteArray result = env->NewByteArray(SS_SIZE);
-    env->SetByteArrayRegion(result, 0, SS_SIZE, (jbyte*)ss);
+    jbyteArray result = (*env)->NewByteArray(env, SS_SIZE);
     return result;
 }
